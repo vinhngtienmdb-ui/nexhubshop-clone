@@ -6,7 +6,8 @@ export default function CartDrawer({
   onClose, 
   cartItems, 
   onUpdateQty, 
-  onRemoveItem 
+  onRemoveItem,
+  onCheckout
 }) {
 
   // Parse raw price string like "378,250₫" to float number 378250
@@ -28,7 +29,11 @@ export default function CartDrawer({
   };
 
   const handleCheckout = () => {
-    alert("Cảm ơn bạn đã đặt hàng! Trực quan hóa việc đặt hàng thành công tại Nexhub Shop.");
+    if (onCheckout) {
+      onCheckout();
+    } else {
+      alert("Cảm ơn bạn đã đặt hàng! Trực quan hóa việc đặt hàng thành công tại Nexhub Shop.");
+    }
   };
 
   return (
