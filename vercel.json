@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/b2b/:path*",
+      "destination": "https://erp.vcomm.vn/api/b2b/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
