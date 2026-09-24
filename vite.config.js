@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3005,
     proxy: {
       '/api/b2b': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:5000',
         changeOrigin: true,
         secure: false
       }
